@@ -1,0 +1,14 @@
+
+
+# Serverless directories
+.serverless
+.idea/*
+node_modules/*
+bin/*
+pkg/*
+src/github.com/*
+package-lock.json
+
+
+
+

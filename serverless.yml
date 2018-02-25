@@ -1,0 +1,26 @@
+service: fishSauce
+
+provider:
+  name: aws
+  runtime: go1.x
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  echo:
+    handler: bin/main
+    events:
+      - http:
+          path: echo
+          method: get
+
+  echo2:
+    handler: bin/echo2
+    events:
+      - http:
+          path: echo2
+          method: get
